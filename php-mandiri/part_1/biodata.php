@@ -21,7 +21,7 @@
       </tr>
         <?php
           $count = 1;
-          if(isset($_POST['nim'])){
+          if(isset($_POST['nim'])):
             // Mengamankan data dari serangan XSS (Cross Site Scripting)
             $nim = htmlspecialchars(trim($_POST['nim']) ?? '');
             $nama = htmlspecialchars(trim($_POST['nama']) ?? '');
@@ -39,8 +39,7 @@
       </tr>
 
         <?php
-            }
-
+            endif;
         ?>
 
     </table>

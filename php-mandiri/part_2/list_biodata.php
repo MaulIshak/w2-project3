@@ -26,8 +26,6 @@
         <th>No.</th>
         <th>Nama</th>
         <th>NIM</th>
-        <th>Jenis Kelamin</th>
-        <th>Tanggal Lahir</th>
         <th>Aksi</th>
       </tr>
         <?php
@@ -43,8 +41,6 @@
         <td><?= $count ?></td>
         <td><?= $data["nim"] ?></td>
         <td><?= $data["nama_lengkap"] ?></td>
-        <td><?= $data["jenis_kelamin"] ?></td>
-        <td><?= $data["tanggal_lahir"] ?></td>
         <td><a href="detail_biodata.php?nim=<?= $data['nim'] ?>">Detail</a> | <a href="edit_biodata.php?nim=<?= $data['nim'] ?>">Edit</a></td>
       </tr>
 

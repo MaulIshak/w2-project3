@@ -5,10 +5,10 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 
-class Home extends BaseController
+class HelloWorld extends BaseController
 {
     public function index()
     {
-        return redirect()->to('/mahasiswa');
+        return 'Hello, World!'; 
     }
 }
