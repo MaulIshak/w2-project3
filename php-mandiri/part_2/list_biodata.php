@@ -5,6 +5,13 @@
   $query = "SELECT * FROM `biodata`";
   $result = mysqli_query($conn, $query);
 
+  if(isset($_POST['delete'])){
+    $nim = $_POST['nim'];
+    $query_delete = "DELETE FROM `biodata` WHERE `nim`='$nim'";
+    mysqli_query($conn, $query_delete);
+    header("Location: list_biodata.php");
+  }
+
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +48,10 @@
         <td><?= $count ?></td>
         <td><?= $data["nim"] ?></td>
         <td><?= $data["nama_lengkap"] ?></td>
-        <td><a href="detail_biodata.php?nim=<?= $data['nim'] ?>">Detail</a> | <a href="edit_biodata.php?nim=<?= $data['nim'] ?>">Edit</a></td>
+        <td><a href="detail_biodata.php?nim=<?= $data['nim'] ?>">Detail</a> | <a href="edit_biodata.php?nim=<?= $data['nim'] ?>">Edit</a> | <form action="" method="post" style="display:inline;">
+          <input type="hidden" name="nim" value="<?= $data['nim'] ?>">
+          <button type="submit" name="delete" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button>
+        </form></td>
       </tr>
 
       
