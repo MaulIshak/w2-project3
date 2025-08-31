@@ -68,6 +68,7 @@
       <button type="submit">Submit</button>
     </form>
   </section>
+  <br>
     <div>
       <a href="list_biodata.php">Back</a>
     </div>

@@ -52,7 +52,7 @@
     </div>
     <br>
     <div>
-      <a href="list_biodata.php">Kembali ke List Biodata</a>
+      <a href="list_biodata.php">Back</a>
     </div>
 </body>
 </html>
