@@ -23,7 +23,7 @@ Proyek ini dibagi menjadi dua bagian utama:
 - **Bahasa**: PHP
 - **Framework**: CodeIgniter 4
 - **Database**: MySQL
-- **Frontend**: HTML & CSS
+- **Frontend**: HTML & CSS (Bootstrap)
 - **Package Manager**: Composer
 
 ## 🛠️ Cara Menjalankan Proyek
@@ -48,11 +48,11 @@ composer install
 ```
 
 3. **Konfigurasi Environment:**
-   - Salin file env menjadi .env
+  - Salin file env menjadi .env
 ```bash
 cp env .env
 ```
-   - Sesuaikan pengaturan pada file .env:
+  - Sesuaikan pengaturan pada file .env:
 ```env
 app.baseURL = 'http://localhost:8080/'
 
