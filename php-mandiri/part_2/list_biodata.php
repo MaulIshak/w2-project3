@@ -24,7 +24,7 @@
 <body>
   <h2>List Mahasiswa</h2>
   <div>
-    <a href="biodata_db.php">Tambah Mahasiswa</a>
+    <a href="biodata_db.php">+Tambah Mahasiswa</a>
   </div>
   <br>
   <section class="table-section">
