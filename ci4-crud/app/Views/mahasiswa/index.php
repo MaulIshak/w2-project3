@@ -5,15 +5,9 @@
   <script>alert("<?= session()->getFlashdata('error'); ?>");</script>
 <?php endif; ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <title>Biodata Mahasiswa</title>
-</head>
-<body>
+<?= $this->extend('layout/template');?>
+
+<?= $this->section('content'); ?>
   <!-- CONTAINER -->
   <div class="container mt-5 w-75">
     <h1 class="mb-3">Biodata Mahasiswa</h1>
@@ -64,7 +58,4 @@
         endforeach; ?>
       </tbody>
   </div>
-
-  
-</body>
-</html>
+  <?= $this->endsection(); ?>

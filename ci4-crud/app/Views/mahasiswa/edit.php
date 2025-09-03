@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <title>Edit Mahasiswa</title>
-</head>
-<body>
+<?= $this->extend('layout/template');?>
+
+<?= $this->section('content'); ?>
   <div class="container mt-5 w-50">
     <h1>Edit Mahasiswa</h1>
     <form action="/mahasiswa/update/<?=$mahasiswa['nim']?>" method="post">
@@ -37,6 +31,4 @@
       <input type="submit" value="Update" class="btn btn-primary mt-3">
     </form>
   </div>
-  
-</body>
-</html>
+  <?= $this->endsection(); ?>

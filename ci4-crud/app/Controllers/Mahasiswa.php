@@ -11,13 +11,17 @@ class Mahasiswa extends BaseController
       $model = new ModelMahasiswa();
       
       $data['mahasiswa'] = $model->getMahasiswa();
+      $data['title'] = 'Biodata Mahasiswa';
 
       return view('mahasiswa/index', $data);
     }
 
     public function create()
     {
-      return view('mahasiswa/create');
+      $data = [
+        'title' => 'Tambah Mahasiswa'
+      ];
+      return view('mahasiswa/create', $data);
     }
     
     public function store(){
@@ -44,6 +48,7 @@ class Mahasiswa extends BaseController
     public function detail($nim): string{
       $model = new ModelMahasiswa();
       $data['mahasiswa'] = $model->getMahasiswa($nim);
+      $data['title'] = 'Detail Mahasiswa';
 
       return view('mahasiswa/detail', $data);
     }
@@ -51,7 +56,7 @@ class Mahasiswa extends BaseController
     public function edit($nim){
       $model = new ModelMahasiswa();
       $data['mahasiswa'] = $model->getMahasiswa($nim);
-
+      $data['title'] = 'Edit Mahasiswa';
       return view('mahasiswa/edit', $data);
     }
 
