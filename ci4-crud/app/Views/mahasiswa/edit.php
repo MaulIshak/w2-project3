@@ -30,7 +30,7 @@
       
       <div class="form-group mb-3">
         <label for="tanggal_lahir">Tanggal Lahir:</label>
-        <input type="date" class="form-date" id="tanggal_lahir" name="tanggal_lahir" value="<?= esc($mahasiswa['tanggal_lahir']) ?>" required>
+        <input type="date" class="form-control form-date" id="tanggal_lahir" name="tanggal_lahir" value="<?= esc($mahasiswa['tanggal_lahir']) ?>" required>
       </div>
       <a href="/mahasiswa" class="btn btn-danger mt-3">Batal</a>
       <input type="hidden" name="_method" value="PUT">

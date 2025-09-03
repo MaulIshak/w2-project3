@@ -45,7 +45,7 @@
       <tbody>
         <?php 
         $count = 1;
-        foreach ($mahasiswa as $mhs): ?>
+        foreach ($mahasiswa ?? [] as $mhs): ?>
         <tr>
           <td><?= $count?></td>
           <td><?= esc($mhs['nim']) ?></td>

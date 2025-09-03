@@ -11,8 +11,13 @@ class ModelMahasiswa extends Model
     protected $allowedFields = ['nim','nama_lengkap', 'jenis_kelamin', 'tanggal_lahir'];
 
     public function getMahasiswa($nim = false){
-      return $this->where(['nim' => $nim])->first(); // kalau ada parameter nim, maka ambil data sesuai nim
+      if($nim){
+        return $this->where(['nim' => $nim])->first(); // kalau ada parameter nim, maka ambil data sesuai nim
+      }else{
+        return $this->findAll();
+      }
     }
+
     public function searchMahasiswa($keyword){
       return $this->like('nama_lengkap', $keyword)
                   ->orLike('nim', $keyword)
